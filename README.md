@@ -1,2 +1,2 @@
 # MaterialVis
-A PRP project visualize Mate日阿里
+A PRP project visualization
