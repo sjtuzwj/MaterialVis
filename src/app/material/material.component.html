@@ -1,0 +1,23 @@
+
+    <div id="left-div">
+    <div id="top-opt" class="outer-div" echarts theme="dark" (chartClick)="onClick($event)" [options]="eleoption"></div>
+    <div id="bot-opt"  theme="dark"  class="outer-div">
+            <div id="left-div2"  theme="dark"  echarts [options]="stsoption"></div>
+            <div id="right-div2"  theme="dark"  echarts (chartClick)="onClickH($event)" [options]="sroption"></div>
+    </div>
+    </div>
+    <div id="right-div">
+        <div id="top-opt3" class="outer-div">
+    <input id="up" type="file" ng2FileSelect [uploader]="uploader" (change)="uploadFile" multiple />
+    <select #selectBox id="select-box" (change)="setid(selectBox.value)" (click)="getlib()">
+        <ng-container *ngFor="let lib of libs;">
+            <option value="{{lib}}" >{{lib}}</option>
+        </ng-container>
+      </select>
+      <input #searchBox id="search-box" placeholder="Input your library id" (input)="setid(searchBox.value)" />
+        </div>      
+        <div id="bot-opt3" class="outer-div">
+    <div id="top-opt2" class="outer-div"  theme="dark"  (chartLegendSelectChanged)="onS($event)" echarts [options]="optoption1"></div>      
+    <div id="bot-opt2"  class="outer-div"  theme="dark"  echarts [options]="optoption2"></div>
+        </div>           
+    </div>
